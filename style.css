@@ -45,11 +45,13 @@ body {
 }
 
 .moon-img {
-  width: 140px;
-  height: auto;
-  max-width: 100%;
+  width: 140px;          /* force exact size */
+  height: 140px;         /* force exact size */
+  object-fit: contain;   /* keep proportions */
+  display: block;
   filter: drop-shadow(0 0 25px rgba(255, 245, 200, 0.9));
 }
+
 
 
 @keyframes float {
@@ -111,9 +113,11 @@ body {
   }
 
   .moon-img {
-    width: 110px;
-    object-fit: contain;
-  }
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
 
   .title {
     font-size: 1.6rem;
