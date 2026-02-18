@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Custom night sky background */
 body {
   height: 100vh;
   display: flex;
@@ -15,7 +8,6 @@ body {
   color: #fef6e4;
   font-family: system-ui, sans-serif;
   overflow: hidden;
-
   background: #050816 url("my-night-sky.jpg") center/cover no-repeat fixed;
 }
 
@@ -26,7 +18,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* Foreground twinkling stars */
 .star {
   position: absolute;
   background: #ffffff;
@@ -44,7 +35,6 @@ body {
   50% { opacity: 1; transform: scale(1.6); }
 }
 
-/* Floating crescent moon */
 .moon-orbit {
   position: absolute;
   inset: 0;
@@ -54,26 +44,10 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
-.moon {
-  position: relative;
+.moon-img {
   width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff9d9 0, #f7e7a1 40%, #e0c76b 100%);
-  box-shadow: 0 0 25px rgba(255, 245, 200, 0.9);
-  overflow: hidden;
-}
-
-.moon::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 35px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: #050816;
-  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.8);
+  height: auto;
+  filter: drop-shadow(0 0 25px rgba(255, 245, 200, 0.9));
 }
 
 @keyframes float {
@@ -123,7 +97,6 @@ body {
   text-align: center;
 }
 
-/* MOBILE OPTIMIZATION */
 @media (max-width: 480px) {
   body {
     padding-top: 20px;
@@ -135,15 +108,8 @@ body {
     margin-bottom: 20px;
   }
 
-  .moon {
+  .moon-img {
     width: 110px;
-    height: 110px;
-  }
-
-  .moon::after {
-    width: 110px;
-    height: 110px;
-    left: 28px;
   }
 
   .title {

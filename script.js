@@ -1,4 +1,3 @@
-// Try to autoplay (may be blocked by some browsers)
 window.addEventListener("load", function () {
   const audio = document.getElementById("ramadan-audio");
   if (audio) {
